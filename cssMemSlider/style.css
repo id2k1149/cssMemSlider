@@ -15,6 +15,7 @@
   
   .radio {
     appearance: none;
+    /* opacity: 0; */
   }
   
   .slider {
@@ -137,6 +138,16 @@
     }
     .description {
       order: 2;
+    }
+    #radio_1:checked ~ .wrapper .label[for="radio_1"]:hover .dot, 
+    #radio_2:checked ~ .wrapper .label[for="radio_2"]:hover .dot, 
+    #radio_3:checked ~ .wrapper .label[for="radio_3"]:hover .dot, 
+    #radio_4:checked ~ .wrapper .label[for="radio_4"]:hover .dot {
+      height: 1rem;
+      width: 1rem;
+      background-color: gray;
+      border-radius: 50%;
+      border: 0.2rem solid blue;
     }
   }
   

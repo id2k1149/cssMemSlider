@@ -3,7 +3,6 @@
   }
   
   .wrapper {
-    max-width: 100%;
     margin: auto;
   }
 
@@ -12,8 +11,8 @@
   }
   
   .slide {
-    width: 100%;
     max-width: 0;
+    width: 100%;
     opacity: 0;
     transition: max-width 0s ease-in 0.5s, opacity 0.5s;
   }
@@ -77,15 +76,15 @@
     align-items: center;
   }
 
+  .label:hover {
+    cursor: pointer;
+  }
+
   .dot {
     height: 1rem;
     width: 1rem;
     background-color: navy;
     border-radius: 50%;
-  }
-
-  .label:hover {
-    cursor: pointer;
   }
 
   .label:hover .dot {
@@ -108,4 +107,3 @@
     background-color: darkgrey;
     border: 0.2rem solid white;
   }
-  

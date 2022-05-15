@@ -1,16 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   body {
-    background-color: gray;
+    background-color:darkgrey;
   }
   
   .wrapper {
-    max-width: 75rem;
-    margin: 1rem 1rem auto;
+    max-width: 100%;
+    margin: auto;
   }
 
   .slider {
@@ -21,7 +15,7 @@
     width: 100%;
     max-width: 0;
     opacity: 0;
-    transition: max-width 0s linear 0.5s, opacity 0.5s;
+    transition: max-width 0s ease-in 0.5s, opacity 0.5s;
   }
   
   .slide img {
@@ -34,35 +28,37 @@
   #radio_4:checked ~ .slider .slide_4 {
     max-width: 100%;
     opacity: 1;
-    transition: max-width 0s linear 0.5s, opacity 0.5s ease-in 0.5s;
+    transition: max-width 0s ease-in 0.5s, opacity 0.5s ease-in 0.5s;
   }
   
   .container {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+  }
+
+  @media (max-width: 320px) {
+    .container {
+      flex-direction:column-reverse;
+    }
   }
 
   .description {
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
     margin: auto;
     font-size: 0;
+    color: darkgrey;
     order: 1;
-    width: 100%;
   }
   
   #radio_1:checked ~ .container .description_1, 
   #radio_2:checked ~ .container .description_2, 
   #radio_3:checked ~ .container .description_3, 
   #radio_4:checked ~ .container .description_4 {
-    order: 1;
-    width: 100%;
-    transform: translate(0);
-    color: #fff;
+    color: white;
     font-size: 1rem;
-    justify-items: center;
     transition: font-size 1s;
   }
   
@@ -79,13 +75,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
   }
 
   .dot {
     height: 1rem;
     width: 1rem;
-    background-color: blue;
+    background-color: navy;
     border-radius: 50%;
   }
 
@@ -94,43 +89,23 @@
   }
 
   .label:hover .dot {
-    height: 1rem;
-    width: 1rem;
     background-color: white;
-    border-radius: 50%;
-    cursor: pointer;
   }
   
   #radio_1:checked ~ .container .label[for="radio_1"] .dot, 
   #radio_2:checked ~ .container .label[for="radio_2"] .dot, 
   #radio_3:checked ~ .container .label[for="radio_3"] .dot, 
   #radio_4:checked ~ .container .label[for="radio_4"] .dot {
-    height: 1rem;
-    width: 1rem;
-    background-color: gray;
-    border-radius: 50%;
-    border: 0.2rem solid blue;
+    box-sizing: border-box;
+    background-color: darkgrey;
+    border: 0.2rem solid navy;
   }
   
   #radio_1:checked ~ .container .label[for="radio_1"]:hover .dot, 
   #radio_2:checked ~ .container .label[for="radio_2"]:hover .dot, 
   #radio_3:checked ~ .container .label[for="radio_3"]:hover .dot, 
   #radio_4:checked ~ .container .label[for="radio_4"]:hover .dot {
-    height: 1rem;
-    width: 1rem;
-    background-color: gray;
-    border-radius: 50%;
+    background-color: darkgrey;
     border: 0.2rem solid white;
-  }
-
-  @media (max-width: 320px) {
-    .container {
-      flex-direction:column-reverse;
-      gap: 0;
-    }
-    .labels {
-      margin-top: 0.2rem;
-      margin-bottom: 0.2rem;
-    }
   }
   

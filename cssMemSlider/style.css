@@ -93,7 +93,7 @@
   }
 
   .label:active .dot {
-    background-color: darkgreen
+    background-color: darkgreen;
   }
   
   #radio_1:checked ~ .container .label[for="radio_1"] .dot, 

@@ -91,6 +91,10 @@
   .label:hover .dot {
     background-color: white;
   }
+
+  .label:active .dot {
+    background-color: darkgreen
+  }
   
   #radio_1:checked ~ .container .label[for="radio_1"] .dot, 
   #radio_2:checked ~ .container .label[for="radio_2"] .dot, 
